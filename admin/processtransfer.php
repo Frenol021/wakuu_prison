@@ -3,15 +3,15 @@
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
-$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-//test if the connection is established successfully then it will proceed in next process else it will throw an error message
-if(! $conn )
-{
-  die('Could not connect: ' . mysql_error());
-}
+$db_name="prison";
+$tbl_name="transfer";
 
-//we specify here the Database name we are using
-mysql_select_db('prison');
+$con = mysqli_connect("localhost","root","","prison");
+
+
+$sql="SELECT * FROM transfer";
+$res=mysqli_query($con,$sql);
+
 $Nid=$_POST['Nid'];
 $Filenum=$_POST['Filenum'];
 $From=$_POST['From'];
@@ -37,10 +37,10 @@ if (!$Nid || !$Filenum || !$From  || !$To || !$dot )
 $sql = "INSERT INTO `prison`.`transfer` (`National_id`,`File_num`, `From_prison`,`To_prison`,`Dateoftransfer`) 
 	VALUES ('{$Nid}', '{$Filenum}', '{$From}', '{$To}', '{$dot}');";
 //we are using mysql_query function. it returns a resource on true else False on error
-$retval = mysql_query( $sql, $conn );
+$retval = mysqli_query( $sql, $con );
 if(! $retval )
 {
-  die('Could not enter data: ' . mysql_error());
+  die('Could not enter data: ' . mysqli_error());
 }
 ?>
 					<script type="text/javascript">
@@ -49,5 +49,5 @@ if(! $retval )
 					</script>
 					<?php
 //close of connection
-mysql_close($conn);
+mysqli_close($conn);
 ?>

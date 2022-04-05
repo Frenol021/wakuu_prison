@@ -16,8 +16,7 @@ $password="";
 $db_name="prison";
 $tbl_name="court";
 
-//mysql_connect("$host","$username","$password") or die("cannot connect");
-//mysql_select_db("$db_name")or die("cannot connect");
+
 $con = mysqli_connect("localhost","root","","prison");
 
 $sql="SELECT * FROM court";

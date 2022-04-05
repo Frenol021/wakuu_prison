@@ -27,7 +27,7 @@ $res=mysqli_query($link,$sql);
 //To delete:
 if(isset($_POST["delete"])){
 $id=$_POST["id"];
-$delete=mysql_query("delete from registration where id='$_POST[id]'");
+$delete=mysqli_query($id,"delete from registration where id='$_POST[id]'");
 if($delete){
 print "<script language=\"javascript\">
 	alert(\"Successfully deleted!...\")

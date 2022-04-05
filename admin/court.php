@@ -32,13 +32,13 @@
 		 <option>2 Weeks</option>
         <option>1 to 3 Months</option>
 		<option>1year</option>
-		<option>5 to 1o Years</option>
+		<option>5 to 10 Years</option>
         <option>15 Above</option>
 		<option>Life Sentence</option></td></tr>
 		
 <tr><td bgcolor="#FFFFFF"><b>Court Location:</b></td>
         <td> <select name="location">
-		 <option>Milimani Court</option>
+		 <option>Milimi Court</option>
         <option>Kibera Court</option>
 		<option>Maseno Court</option>
 		<option>Kwale Court</option>

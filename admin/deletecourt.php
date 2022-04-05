@@ -12,17 +12,22 @@
 
 <?php
 ob_start();
-$link=mysql_connect("localhost","root","");
-mysql_select_db("prison",$link);
-$result=mysql_query("select * from court");
+$link = mysqli_connect("localhost","root","","prison");
+
+$sql="SELECT * FROM court";
+$res=mysqli_query($link,$sql);
+
 ?>
+
+
+
 
 
 <?php
 //To delete:
 if(isset($_POST["delete"])){
 $id=$_POST["National_id"];
-$delete=mysql_query("delete from court where National_id='$_POST[National_id]'");
+$delete=mysqli_query($id,"delete from court where National_id='$_POST[National_id]'");
 if($delete){
 print "<script language=\"javascript\">
 	alert(\"Successfully deleted!...\")
@@ -54,7 +59,7 @@ print "<table width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='s
 
 </tr>";
 $i=1;
-while($row=mysql_fetch_array($result)){
+while($row=mysqli_fetch_array($res)){
 print "<form method=POST>";
 print"<tr bgcolor='white'>
 <td>$i<input type=\"hidden\" name=\"National_id\" value=\"$row[National_id]\"></td>

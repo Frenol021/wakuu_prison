@@ -99,7 +99,7 @@
 </td>
 </tr>
 <tr>
-<td height="21" colspan="2" align="center" bgcolor="#FF0000">&copy; WAKUU PRISON SYSTEM By Antony, Dennis, Jean and John</td>
+<td height="21" colspan="2" align="center" bgcolor="#FF0000">&copy; WAKUU PRISON SYSTEM </td>
 </tr>
 </table>
 </body>

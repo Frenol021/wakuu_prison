@@ -17,13 +17,12 @@ $db_name="prison";
 $tbl_name="registration";
 
 $con = mysqli_connect("localhost","root","","prison");
-//mysql_connect("$host","$username","$password") or die("cannot connect");
-//mysql_select_db("$db_name")or die("cannot connect");
+
 
 $sql="SELECT * FROM registration";
 $res=mysqli_query($con,$sql);
 
-//$sel= mysql_query("select * from $tbl_name");
+
 echo"<table align='center' width='100%' bgcolor='GREEN' border='0' bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption><h3>PRISONER INFORMATION</h3></caption>
 <tr bgcolor='#CCCCCC'>

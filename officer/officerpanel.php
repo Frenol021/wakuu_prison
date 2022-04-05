@@ -1,7 +1,7 @@
 
 
 <head>
-  <title>KENYA PRISONS SERVICE</title>
+  <title>WAKUU PRISON SERVICE</title>
    <link rel="stylesheet" media="screen" href="login.css" >
 </head>
 <body>
@@ -59,7 +59,7 @@
           <tr>
             <td colspan='3' align='center' bgcolor='#FF0000' height='1'>
 					&copy; <strong>
-                &nbsp;WAKUU PRISON SYSTEM By Antony, Dennis, Jean and John</strong></td>
+                &nbsp;WAKUU PRISON SYSTEM </strong></td>
           </tr>
 	</table>
 </body>

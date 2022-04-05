@@ -40,7 +40,7 @@
 </td>
 <td width="1%" bgcolor="#FFFFFF"></tr>
 <tr>
-<td height="21" colspan="2" align="center" bgcolor="#FF0000">&copy; KENYA PRISONS SERVICE</td>
+<td height="21" colspan="2" align="center" bgcolor="#FF0000">&copy; WAKUU PRISON </td>
 </tr>
 </table>
 </body>

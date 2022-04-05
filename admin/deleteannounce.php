@@ -17,9 +17,7 @@ $link = mysqli_connect("localhost","root","","prison");
 $sql="SELECT * FROM announce";
 $res=mysqli_query($link,$sql);
 
-//$link=mysql_connect("localhost","root","");
-//mysqli_select_db("prison",$link);
-//$result=mysql_query("select * from announce");
+
 ?>
 
 
@@ -27,7 +25,7 @@ $res=mysqli_query($link,$sql);
 //To delete:
 if(isset($_POST["delete"])){
 $Id=$_POST["Id"];
-$delete=mysql_query("delete from announce where Id='$_POST[Id]'");
+$delete=mysqli_query($Id,"delete from announce where Id='$_POST[Id]'");
 if($delete){
 print "<script language=\"javascript\">
 	alert(\"Successfully deleted!...\")

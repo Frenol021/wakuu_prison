@@ -3,20 +3,15 @@
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
+$db_name="prison";
+$tbl_name="transfer";
 
-$conn = mysqli_connect("localhost","root","","prison");
+$con = mysqli_connect("localhost","root","","prison");
 
-//$sql="SELECT * FROM registration";
-//$res=mysqli_query($con,$sql);
-
-//test if the connection is established successfully then it will proceed in next process else it will throw an error message
-if(! $conn )
-{
-  die('Could not connect: ' . mysqli_error());
-}
-
+$sql="SELECT * FROM transfer";
+$res=mysqli_query($con,$sql);
 //we specify here the Database name we are using
-//mysql_select_db('prison');
+
 if(isset($_POST['submit']))
 {
 $To=$_POST['To'];
@@ -27,10 +22,10 @@ $Message=$_POST['Message'];
 $sql = "INSERT INTO `prison`.`announce` (`to`,`Id`,`subject`,`message`) 
 	     VALUES ('{$To}','{$id}', '{$Subject}', '{$Message}');";
 //we are using mysql_query function. it returns a resource on true else False on error
-$retval = mysql_query( $sql, $conn );
+$retval = mysqli_query( $sql, $con );
 if(! $retval )
 {
-  die('Could not enter data: ' . mysql_error());
+  die('Could not enter data: ' . mysqli_error());
 }}
 ?>
 					<script type="text/javascript">
@@ -39,5 +34,5 @@ if(! $retval )
 					</script>
 					<?php
 //close of connection
-mysql_close($conn);
+mysqli_close($conn);
 ?>

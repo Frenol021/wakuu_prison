@@ -16,10 +16,12 @@ $password="";
 $db_name="prison";
 $tbl_name="court";
 
-mysql_connect("$host","$username","$password") or die("cannot connect");
-mysql_select_db("$db_name")or die("cannot connect");
+$con = mysqli_connect("localhost","root","","prison");
 
-$sel= mysql_query("select * from $tbl_name");
+
+$sql="SELECT * FROM transfer";
+$res=mysqli_query($con,$sql);
+
 echo"<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption><h3>COURT CASE</h3></caption>
 <tr bgcolor='#CCCCCC'>
@@ -31,7 +33,7 @@ echo"<table align='center' width='100%' border='0' cellpadding='3' cellspacing='
 
 </tr>";
 
-   while($row=mysql_fetch_array ($sel))
+   while($row=mysqli_fetch_array ($res))
 {
 echo "<tr bgcolor='white'>";
 

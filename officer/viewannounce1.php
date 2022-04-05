@@ -60,7 +60,7 @@ echo"</table>";
             <td align='center' bgcolor='red' height='1'>
 					&copy; 2022 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					WAKUU PRISON SYSTEM By Antony, Dennis, Jean and John.
+					WAKUU PRISON SYSTEM.
             </td>
           </tr>
 	</table>

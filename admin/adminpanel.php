@@ -13,7 +13,7 @@
 		  <tr>
             <td colspan="7" bgcolor="red" height="1" align="center">
 		      <h1><font size="4">
-	           <!-- <a href="index.php">Home</a> | -->
+	           
               			   
 		        <a href="search-form.php">Search </a> 
 		        <a href="location.php">Location</a> |

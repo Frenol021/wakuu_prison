@@ -24,7 +24,7 @@ $res=mysqli_query($link,$sql);
 //To delete:
 if(isset($_POST["delete"])){
 $National_id=$_POST["National_id"];
-$delete=mysql_query("delete from court where National_id='$_POST[National_id]'");
+$delete=mysqli_query($National_id,"delete from court where National_id='$_POST[National_id]'");
 if($delete){
 print "<script language=\"javascript\">
 	alert(\"Successfully deleted!...\")
